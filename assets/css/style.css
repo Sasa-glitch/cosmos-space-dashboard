@@ -1753,6 +1753,9 @@ button,
     .sidebar-mobile {
         transform: translate(0);
     }
+    .sidebar-overlay {
+        display: none;
+    }
 }
 .sidebar-mobile.sidebar-open {
     transform: translate(0) !important;

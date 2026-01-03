@@ -48,6 +48,10 @@ apodDateInput.valueAsDate = todaysDate;
 // get all planet cards
 const planetCards = document.querySelectorAll(".planet-card");
 
+// get sidebartoggle and make the side bar toggle in mobile
+const toggleSidebarButton = document.getElementById("sidebar-toggle");
+const sidebarOverlay = document.querySelector(".sidebar-overlay");
+
 // 1-00 starting nasa today section
 
 // give nav button some magic
@@ -57,6 +61,16 @@ buttons.forEach((button) => {
         handelButtons(e.currentTarget);
     });
 });
+
+// give toggle button somemagic
+toggleSidebarButton.addEventListener("click", toggleSideBar);
+
+sidebarOverlay.addEventListener("click", toggleSideBar);
+
+function toggleSideBar() {
+    document.getElementById("sidebar").classList.toggle("sidebar-open");
+    sidebarOverlay.classList.toggle("hidden");
+}
 
 // handel the page that will be visible and hide the others
 function handelPages(button) {
